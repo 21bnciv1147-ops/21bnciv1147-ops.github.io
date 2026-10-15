@@ -10,7 +10,7 @@ const SITE = {
   photo: "",   // e.g. "photo.jpg" after uploading a photo to the repo. Leave "" for none.
   eyebrow: "Civil Engineer · Hydrologist · Climate Risk Researcher",
   headline: "Modeling floods, climate extremes and water systems.",
-  intro: "I work on hydrological and hydraulic modeling, CMIP6 climate impacts, remote sensing and explainable machine learning to assess flood and multi-hazard risk for communities and infrastructure. Based at UET Peshawar, Pakistan.",
+  intro: "I work on hydrological and hydraulic modeling, CMIP6 climate molels impacts, remote sensing and explainable machine learning to assess flood and multi-hazard risk for communities and infrastructure. Based at UET Peshawar, Pakistan.",
   email: "21bnciv1147@uetpeshawar.edu.pk",
   location: "Peshawar, Pakistan",
 
