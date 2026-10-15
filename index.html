@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shahbaz Khan | Hydrologist & Climate Risk Researcher</title>
+<meta name="description" content="Civil Engineer and Hydrologist specializing in flood hazard modeling, CMIP6 climate impacts, remote sensing and machine learning for water resources.">
+<style>
+:root{
+  --bg:#f7fafc; --surface:#ffffff; --text:#0f172a; --muted:#52627a; --line:#e2e8f0;
+  --accent:#0e7490; --accent2:#0891b2; --chip:#e0f2fe; --chipt:#075985;
+}
+:root[data-theme="dark"]{
+  --bg:#0b1220; --surface:#111a2e; --text:#e6edf7; --muted:#93a4bf; --line:#1f2c47;
+  --accent:#22d3ee; --accent2:#67e8f9; --chip:#12304a; --chipt:#8fdcf5;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1220; --surface:#111a2e; --text:#e6edf7; --muted:#93a4bf; --line:#1f2c47;
+    --accent:#22d3ee; --accent2:#67e8f9; --chip:#12304a; --chipt:#8fdcf5;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{font-weight:700;color:var(--text)}
+.links{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;align-items:center}
+.links a{color:var(--muted)}
+.links a:hover{color:var(--accent);text-decoration:none}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:4px 9px;cursor:pointer;font-size:.95rem}
+.hero{padding:84px 0 56px;background:
+  radial-gradient(900px 300px at 85% -10%,color-mix(in srgb,var(--accent) 22%,transparent),transparent),
+  radial-gradient(700px 260px at 0% 0%,color-mix(in srgb,var(--accent2) 14%,transparent),transparent)}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:10px 0 14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:680px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;border:1px solid var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--bg)}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{font-size:1.6rem;color:var(--accent);display:block}
+.stat span{color:var(--muted);font-size:.88rem}
+section{padding:56px 0}
+section h2{font-size:1.7rem;margin-bottom:6px}
+section h2::after{content:"";display:block;width:48px;height:3px;background:var(--accent);margin-top:8px;border-radius:2px}
+.sub{color:var(--muted);margin:14px 0 26px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;transition:.2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p,.card li{color:var(--muted);font-size:.93rem}
+.card ul{padding-left:18px;margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{background:var(--chip);color:var(--chipt);font-size:.76rem;padding:3px 9px;border-radius:999px;font-weight:500}
+.status{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:6px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.published{background:#dcfce7;color:#166534}
+.accepted{background:#dbeafe;color:#1e40af}
+.review{background:#fef3c7;color:#92400e}
+.pub{display:flex;flex-direction:column;gap:14px}
+.pub .card{padding:18px 20px}
+.pub .meta{font-size:.85rem;color:var(--muted);margin-top:6px}
+.timeline{border-left:2px solid var(--line);padding-left:22px;display:flex;flex-direction:column;gap:22px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font-size:1.05rem}
+.job .when{color:var(--accent);font-size:.85rem;font-weight:600}
+.job ul{padding-left:18px;margin-top:6px;color:var(--muted);font-size:.93rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.contact{text-align:center}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:640px){.links a.hide-m{display:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Shahbaz Khan</a>
+    <nav class="links">
+      <a class="hide-m" href="#research">Research</a>
+      <a href="#publications">Papers</a>
+      <a href="#projects">Projects</a>
+      <a class="hide-m" href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Civil Engineer · Hydrologist · Climate Risk Researcher</div>
+    <h1>Modeling floods, climate extremes and water systems.</h1>
+    <p class="lead">I work on hydrological and hydraulic modeling, CMIP6 climate impacts, remote sensing and explainable machine learning to assess flood and multi-hazard risk for communities and infrastructure. Based at UET Peshawar, Pakistan.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#publications">Read Papers</a>
+      <a class="btn" href="mailto:21bnciv1147@uetpeshawar.edu.pk">Email Me</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4</b><span>Papers (published, accepted, under review)</span></div>
+      <div class="stat"><b>11</b><span>Gauging stations in Indus sub-basin study</span></div>
+      <div class="stat"><b>29</b><span>Schools assessed for multi-hazard risk</span></div>
+      <div class="stat"><b>3</b><span>International collaborations (GIZ, UNICEF, ADB)</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="research"><div class="wrap">
+  <h2>Research Interests</h2>
+  <p class="sub">BSc Civil Engineering, UET Peshawar (2021–2025). Thesis: climate-driven flood hazard assessment in data-scarce mountainous basins using geospatial machine learning and hydrodynamic modeling under CMIP6 SSP scenarios.</p>
+  <div class="grid">
+    <div class="card"><h3>Hydrological &amp; River Basin Modeling</h3><p>Rainfall–runoff simulation, streamflow prediction, watershed analysis, physically based and data-driven models.</p></div>
+    <div class="card"><h3>Climate Change &amp; Hydroclimatic Extremes</h3><p>Impacts on streamflow, floods and droughts using observations and CMIP6 projections.</p></div>
+    <div class="card"><h3>Hydraulic Modeling &amp; Flood Risk</h3><p>1D/2D modeling, flood routing, inundation mapping and climate-informed hazard and risk assessment.</p></div>
+    <div class="card"><h3>Machine Learning &amp; Explainable AI</h3><p>ML, deep learning and XAI for hydrological prediction, climate-data correction, model selection and uncertainty.</p></div>
+    <div class="card"><h3>Remote Sensing &amp; GIS</h3><p>Satellite remote sensing, GIS and Google Earth Engine for hydrological and climate-risk applications.</p></div>
+    <div class="card"><h3>Multi-Hazard &amp; Compound Risk</h3><p>Floods, droughts, heatwaves, landslides and interacting hazards affecting communities and infrastructure.</p></div>
+  </div>
+</div></section>
+
+<section id="publications"><div class="wrap">
+  <h2>Publications</h2>
+  <p class="sub">Peer-reviewed work and manuscripts in progress.</p>
+  <div class="pub">
+    <div class="card">
+      <span class="status published">Published · 2025</span>
+      <h3>Climate-driven flood hazard assessment in data-scarce mountainous basins using a GIS-based machine learning and hydrodynamic modelling under CMIP6 SSP scenarios</h3>
+      <div class="meta">Khan, S., Khan, A. U., et al. · <i>Scientific Reports</i> · <a href="https://www.researchgate.net/profile/Shahbaz-Khan-79" target="_blank" rel="noopener">View on ResearchGate</a></div>
+    </div>
+    <div class="card">
+      <span class="status accepted">Accepted · 2026</span>
+      <h3>Future Changes in High-Flow Magnitude and Seasonality Across the Indus Sub-Basins Based on Conceptual and Deep Learning Models</h3>
+      <p>Hybrid GR2M-SC/GR2M+ and LSTM framework across the Upper Indus, Kabul and Jhelum basins (11 stations) under SSP2-4.5 and SSP5-8.5, with variance-based uncertainty decomposition of GCM, model, scenario and interaction effects.</p>
+      <div class="meta"><i>Earth Systems and Environment</i> · With N. Ejaz (Tsinghua University)</div>
+    </div>
+    <div class="card">
+      <span class="status accepted">Accepted · 2026</span>
+      <h3>Deep learning-based prediction and analysis of urban heat island dynamics using multispectral indices and precipitation data</h3>
+      <div class="meta">Ullah, B., Khan, A. U., Akbar, A., Khan, S., et al. · <i>Journal of Water and Climate Change</i></div>
+    </div>
+    <div class="card">
+      <span class="status review">Under review · 2026</span>
+      <h3>Climate-Driven Multi-Hazard Risk Assessment of Educational Infrastructure: Integrating CMIP6 Climate Projections and Spatially Explicit Vulnerability Analysis</h3>
+      <p>Flood, heatwave, drought and wind hazards for 29 schools in Dadu using ERA5-Land and CMIP6 SSP5-8.5, Random Forest bias correction, XGBoost–SHAP model selection, IDF analysis and HEC-RAS 2D Rain-on-Mesh.</p>
+      <div class="meta">Khan, S., Ullah, B., Khan, A. U., et al. · <i>Climate Risk Management</i></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">Selected hydrology, hydraulics and climate-risk work.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Wabash River: Coupled Hydrologic–Hydraulic–Sediment Modeling</h3>
+      <p>Integrated HEC-HMS, HEC-SSP and HEC-RAS 2D with GPM-IMERG rainfall, observed streamflow, a 1 m DEM, LULC and soils. Calibrated and validated rainfall–runoff and MUSLE sediment models (2010–2024), ran flood frequency analysis and a 100-year flood with 2D sediment transport to locate erosion, deposition and flood hotspots.</p>
+      <div class="tags"><span class="tag">HEC-HMS</span><span class="tag">HEC-RAS 2D</span><span class="tag">HEC-SSP</span><span class="tag">GPM-IMERG</span></div>
+    </div>
+    <div class="card">
+      <h3>ML &amp; Deep Learning Framework for Hydrology and Climate-Data Correction</h3>
+      <p>Research collaboration with a professor at Indiana State University: preprocessing, bias correction, model ranking and multi-model ensembles with RF, XGBoost, CatBoost, AdaBoost and LightGBM; ANN, LSTM, Temporal Fusion Transformer and counterfactual XAI models.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">TFT</span><span class="tag">XAI</span></div>
+    </div>
+    <div class="card">
+      <h3>Multi-Hazard Climate Risk &amp; Resilient Design for 29 Schools, Dadu</h3>
+      <p>ADB-funded assessment of pluvial flood, drought, heatwave and wind hazards with exposure and vulnerability, using historical and projected precipitation, Tmax and Tmin trends.</p>
+      <div class="tags"><span class="tag">CMIP6</span><span class="tag">ERA5-Land</span><span class="tag">HEC-RAS</span><span class="tag">Remote Sensing</span></div>
+    </div>
+    <div class="card">
+      <h3>Tributary De-Synchronization for Flood Peak Attenuation</h3>
+      <p>HEC-HMS framework for the Swat River Basin testing lag-time modification across tributaries. De-synchronized flows reduced peaks by about 11.4% (upper), 16.5% (middle) and 26.8% (lower) basin sections.</p>
+      <div class="tags"><span class="tag">HEC-HMS</span><span class="tag">Swat River Basin</span><span class="tag">Flood Mitigation</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="timeline">
+    <div class="job">
+      <h3>Junior Hydrologist · Creative Engineering Consultants, Peshawar</h3>
+      <div class="when">Dec 2025 – Present</div>
+      <ul>
+        <li>HEC-HMS and HEC-RAS (1D/2D) rainfall–runoff and hydrodynamic modeling.</li>
+        <li>Multi-hazard climate risk assessment for buildings, bridges and roads: flood, drought, landslide susceptibility and wind.</li>
+        <li>CMIP6, GIS, remote sensing and Google Earth Engine integrated with hazard–exposure–vulnerability frameworks.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Junior Engineer, Climate Change Adaptation · UET Peshawar (UNICEF-funded), Swat &amp; Buner</h3>
+      <div class="when">Sep – Dec 2025</div>
+      <ul>
+        <li>Field surveys and watershed assessments for flood-affected water-supply schemes.</li>
+        <li>Design-flow estimation, river hydraulics and flood inundation analysis.</li>
+        <li>GIS flood risk maps supporting climate-resilient rehabilitation planning.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Junior Infrastructure Engineer · UET Peshawar (GIZ-funded)</h3>
+      <div class="when">Jun – Sep 2025</div>
+      <ul>
+        <li>Climate profiling and hydroclimatic assessment across 12 districts of Pakistan.</li>
+        <li>Hydrologic modeling with ML and deep learning to assess historical and future conditions for adaptation planning.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills &amp; Tools</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="skills">
+    <div class="card"><h3>Hydrology &amp; Hydraulics</h3><div class="tags"><span class="tag">HEC-HMS</span><span class="tag">HEC-RAS 1D/2D</span><span class="tag">Rain-on-Mesh</span><span class="tag">HEC-SSP</span><span class="tag">SWAT</span><span class="tag">Calibration &amp; Validation</span><span class="tag">EasyFit</span></div></div>
+    <div class="card"><h3>GIS &amp; Remote Sensing</h3><div class="tags"><span class="tag">Google Earth Engine</span><span class="tag">QGIS</span><span class="tag">ArcGIS</span><span class="tag">AutoCAD</span><span class="tag">Sentinel-1/2</span></div></div>
+    <div class="card"><h3>Programming &amp; AI</h3><div class="tags"><span class="tag">Python</span><span class="tag">Google Colab</span><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Explainable AI</span><span class="tag">SHAP</span></div></div>
+    <div class="card"><h3>Data Analysis</h3><div class="tags"><span class="tag">Statistical Analysis</span><span class="tag">Data Cleaning</span><span class="tag">Data Visualization</span></div></div>
+  </div>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><h3>Training &amp; Certifications</h3><ul>
+      <li>WASH systems strengthening (IRC &amp; UNICEF)</li>
+      <li>Risk Assessment and Climate Proofing (GIZ)</li>
+      <li>Application of AI/ML in Civil Engineering (Pakistan Engineers Forum, UET Peshawar)</li>
+      <li>GIZ flood risk workshop (Aug 2025) · UNICEF geospatial workshop (Aug 2025)</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2 style="display:inline-block">Let's collaborate</h2>
+  <p class="sub" style="margin-left:auto;margin-right:auto">Open to research collaborations, hydrology and flood-risk consulting, and graduate opportunities.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:21bnciv1147@uetpeshawar.edu.pk">Email</a>
+    <a class="btn" href="https://www.linkedin.com/in/shahbaz-khan-73b8a62b9" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://www.researchgate.net/profile/Shahbaz-Khan-79" target="_blank" rel="noopener">ResearchGate</a>
+    <a class="btn" href="https://github.com/21bnciv1147-ops" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Shahbaz Khan · Peshawar, Pakistan</div></footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme'),k='theme';
+  try{var s=localStorage.getItem(k);if(s)r.setAttribute('data-theme',s)}catch(e){}
+  b.onclick=function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var n=dark?'light':'dark';r.setAttribute('data-theme',n);
+    try{localStorage.setItem(k,n)}catch(e){}
+  };
+})();
+</script>
+</body>
+</html>
